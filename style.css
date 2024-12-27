@@ -1,0 +1,238 @@
+@font-face {
+    font-family: 'LibreBaskerville';
+    src: url('fonts/LibreBaskerville-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LibreBaskervilleItalic';
+    src: url('fonts/LibreBaskerville-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #CDD3DF;
+    font-family: 'LibreBaskerville';
+    font-size: 1em;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding-left: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.header a {
+    color: #000;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.middle {
+    display: flex; /* Use Flexbox to arrange the children side by side */
+    flex: 1; /* Allow the middle section to take up the remaining space */
+    justify-content: flex-start; /* Align items at the top, remove space-between */
+    align-items: flex-start; /* Align items at the top */
+    padding-top: 0; /* Remove the top padding to reduce space */
+}
+
+.footer {
+    border-top: 0.15em dotted #000;
+    padding-top: 0.5%;
+    padding-left: 1%;
+    padding-bottom: 0.5%;
+    font-size: smaller;
+}
+
+.footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.navigation {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    padding-left: 1%; /* Add some padding to the left */
+    padding-right: 1%; /* Add some padding to the right */
+    width: 25vw; /* Make the width as wide as the content */
+}
+
+.navigation .item {
+    margin: 0.1em 0; /* Space between the items vertically */
+}
+
+.navigation a, .navigation .title {
+    text-decoration: none;
+    color: #000;
+    display: block; /* Ensure the anchor is treated as a block element for better spacing */
+}
+
+.navigation a:hover,
+.navigation .title:hover {
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+.content {
+    padding-left: 1%;
+    padding-right: 2%;
+    width: 85vw; /* Make the content 50% of the viewport width */
+    align-items:start;
+    display: flex; /* Enable flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    gap: 0.5em; /* Add some space between the items */
+
+}
+
+.content a {
+    color: #000;
+}
+
+.content img{
+    width: 70vw;
+    height: auto;
+
+}
+
+.content p {
+    font-family: 'LibreBaskervilleItalic';
+    padding-top: 1%; /* Add some padding to the top */
+    text-align: left; /* Center align the paragraph text */
+    margin-bottom: 2%;
+
+}
+
+/* Hero image container */
+.hero-img {
+    flex: 2; /* Allow the hero image to take up more space */
+    display: flex;
+    justify-content: start; /* Center the image horizontally */
+    align-items: start; /* Center the image vertically */
+    width: 70vw; /* Make the container 70% of the viewport width */
+    height: auto; /* The height will be adjusted automatically to maintain the aspect ratio */
+    padding-bottom: 1%; /* Add some padding to the bottom */
+    padding-left: 1%; /* Add some padding to the left */
+}
+
+/* Make the image responsive */
+.hero-img img {
+    width: 70%; /* Make the image fill the width of the container */
+    height: auto;
+}
+
+
+/* Initially hide the infoText */
+.infoText {
+    display: none; /* Hide it by default */
+    /*transition: 0.5s ease-out, padding 0.5s ease-out; /* For smooth dropdown */
+    max-height: 0; /* Start with no height */
+    overflow: hidden; /* Hide the content overflow */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Distribute space evenly between the items */
+}
+
+/* Show the dropdown with proper height */
+.infoText.show {
+    display: block;
+    max-height: 100%; /* Set a max-height for the dropdown */
+    padding: 1%;
+    padding-left: 1em; /* Add some padding to the left */
+    width: max-content; /* Make the width as wide as the content */
+
+}
+
+
+/* Media Queries */
+@media (max-width: 800px) {
+    *{
+        font-size: x-large;
+    }
+
+    .header {
+        padding-bottom: 1%;
+    }
+    .middle {
+        display: block; /* Stack items vertically */
+        align-items: start; /* Align items to the start */
+        font-size: x-large;
+    }
+
+    .footer{
+        border-top: 0.2em dotted #000;
+        padding-top: 1%;   
+        padding-bottom: 2%; 
+    }
+
+    .content {
+        padding-top: 3%;
+        width: calc(100vw - 2%); /* Adjust to remove padding from the viewport width */
+        display: flex; /* Enable flexbox for centering */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the content horizontally */
+        justify-content: center, space-between; /* Center content vertically */
+    }
+
+    /* Center the image and adjust width */
+    .content img {
+        width: 95vw; /* Make the image 95% of the viewport width */
+        height: auto; /* Maintain the aspect ratio */
+
+    }
+
+    /* Match paragraph width with the image */
+    .content p {
+        width: 95vw; /* Make the paragraph match the image width */
+        font-family: 'LibreBaskervilleItalic'; /* Ensure correct font style */
+        margin-bottom: 0;
+       
+    }
+
+    .content img[alt="Grad2024-04"] {
+        width: 95vw; /* Example: Adjust the width */
+    }
+    
+
+    /* Hero image container */
+    .hero-img {
+        flex: 2; /* Allow the hero image to take up more space */
+        display: flex;
+        justify-content: center; /* Center the image horizontally */
+        align-items: center; /* Center the image vertically */
+        width: 100vw; /* Make the container 70% of the viewport width */
+        height: auto; /* The height will be adjusted automatically to maintain the aspect ratio */
+        padding-bottom: 1%; /* Add some padding to the bottom */
+        padding-top: 1%; /* Add some padding to the top */
+        padding-left: 0; /* Add some padding to the left */
+    }
+
+    /* Make the image responsive */
+    .hero-img img {
+        width: 95%; /* Make the image fill the width of the container */
+        height: auto;
+        padding-left: 0; /* Add some padding to the left */
+    }
+
+    .navigation a, .navigation .title {
+        width: 90vw; /* Make the width as wide as the content */
+    }
+
+    
+}
