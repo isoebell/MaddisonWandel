@@ -6,7 +6,7 @@
 }
 
 @font-face {
-    font-family: 'LibreBaskervilleItalic';
+    font-family: 'LibreBaskerville';
     src: url('fonts/LibreBaskerville-Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
@@ -112,7 +112,7 @@ html, body {
 }
 
 .content p {
-    font-family: 'LibreBaskervilleItalic';
+    font-family: 'LibreBaskerville';
     padding-top: 1%; /* Add some padding to the top */
     text-align: left; /* Center align the paragraph text */
     margin-bottom: 2%;
