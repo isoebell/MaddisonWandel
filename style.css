@@ -114,7 +114,6 @@ html, body {
 
 .content .item p {
     font-family: 'LibreBaskerville';
-    padding-top: 1%; /* Add some padding to the top */
     text-align: left; /* Center align the paragraph text */
     margin-bottom: 2%;
     font-size: 0.9rem;
