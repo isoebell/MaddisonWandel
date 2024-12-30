@@ -99,13 +99,11 @@ html, body {
     flex-direction: column; /* Stack items vertically */
     gap: 0.5em; /* Add some space between the items */
     overflow-x: hidden;
-
-
 }
 
-/*.content a {
+.content a {
     color: #000;
-}*/
+}
 
 .content img{
     width: 70vw;
@@ -207,7 +205,10 @@ html, body {
 
     .content p{
         font-size: x-large;
+        
+        margin: 0; /* Optional: Adjust margins if needed */
     }
+    
 
     /* Center the image and adjust width */
     .content img {
