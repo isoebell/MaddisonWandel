@@ -98,26 +98,33 @@ html, body {
     display: flex; /* Enable flexbox for centering */
     flex-direction: column; /* Stack items vertically */
     gap: 0.5em; /* Add some space between the items */
+    overflow-x: hidden;
+
 
 }
 
-.content a {
+/*.content a {
     color: #000;
-}
+}*/
 
 .content img{
     width: 70vw;
     height: auto;
+    display: block;
 
 }
 
-.content p {
+.content .item p {
     font-family: 'LibreBaskerville';
     padding-top: 1%; /* Add some padding to the top */
     text-align: left; /* Center align the paragraph text */
     margin-bottom: 2%;
-
+    font-size: 0.9rem;
+    width: 70vw;
+    word-wrap: break-word;
 }
+
+
 
 /* Hero image container */
 .hero-img {
@@ -133,7 +140,7 @@ html, body {
 
 /* Make the image responsive */
 .hero-img img {
-    width: 70%; /* Make the image fill the width of the container */
+    width: 80%; /* Make the image fill the width of the container */
     height: auto;
 }
 
@@ -151,7 +158,7 @@ html, body {
 
 /* Show the dropdown with proper height */
 .infoText.show {
-    display: block;
+    display: flex;
     max-height: 100%; /* Set a max-height for the dropdown */
     padding: 1%;
     padding-left: 1em; /* Add some padding to the left */
@@ -163,11 +170,13 @@ html, body {
 /* Media Queries */
 @media (max-width: 800px) {
     *{
-        font-size: x-large;
+        margin-left: 0.2%;
     }
 
     .header {
         padding-bottom: 1%;
+        font-size: x-large;
+
     }
     .middle {
         display: block; /* Stack items vertically */
@@ -179,6 +188,8 @@ html, body {
         border-top: 0.2em dotted #000;
         padding-top: 1%;   
         padding-bottom: 2%; 
+        font-size: x-large;
+
     }
 
     .content {
@@ -188,6 +199,14 @@ html, body {
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center the content horizontally */
         justify-content: center, space-between; /* Center content vertically */
+        overflow: hidden; /* Hide the content overflow */
+        margin-bottom: 2%;
+        font-size: 1.2em;
+        
+    }
+
+    .content p{
+        font-size: x-large;
     }
 
     /* Center the image and adjust width */
@@ -197,17 +216,24 @@ html, body {
 
     }
 
-    /* Match paragraph width with the image */
-    .content p {
-        width: 95vw; /* Make the paragraph match the image width */
-        font-family: 'LibreBaskervilleItalic'; /* Ensure correct font style */
-        margin-bottom: 0;
-       
+    .content .item p {
+        margin-bottom: 1%;
+        margin-top: 0.5%;
+        width: 97vw;
+    }
+   
+    .content a{
+        color: #000;
     }
 
-    .content img[alt="Grad2024-04"] {
+    .content img[alt="Grad2024-05"] {
         width: 95vw; /* Example: Adjust the width */
     }
+
+    .infoText.show {
+        gap: 0.3rem; /* Add some space between the items */
+    }
+
     
 
     /* Hero image container */
@@ -221,6 +247,7 @@ html, body {
         padding-bottom: 1%; /* Add some padding to the bottom */
         padding-top: 1%; /* Add some padding to the top */
         padding-left: 0; /* Add some padding to the left */
+        margin-left: 0;
     }
 
     /* Make the image responsive */
@@ -228,6 +255,7 @@ html, body {
         width: 95%; /* Make the image fill the width of the container */
         height: auto;
         padding-left: 0; /* Add some padding to the left */
+        margin-left: 0;
     }
 
     .navigation a, .navigation .title {
