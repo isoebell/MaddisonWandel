@@ -16,7 +16,7 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #CDD3DF;
+    /*background-color: #CDD3DF;*/
     font-family: 'LibreBaskerville';
     font-size: 1em;
 }
@@ -173,20 +173,20 @@ html, body {
 
     .header {
         padding-bottom: 1%;
-        font-size: x-large;
+        font-size: large;
 
     }
     .middle {
         display: block; /* Stack items vertically */
         align-items: start; /* Align items to the start */
-        font-size: x-large;
+        font-size: large;
     }
 
     .footer{
         border-top: 0.2em dotted #000;
         padding-top: 1%;   
         padding-bottom: 2%; 
-        font-size: x-large;
+        font-size: large;
 
     }
 
@@ -199,12 +199,12 @@ html, body {
         justify-content: center, space-between; /* Center content vertically */
         overflow: hidden; /* Hide the content overflow */
         margin-bottom: 2%;
-        font-size: 1.2em;
+        font-size: large;
         
     }
 
     .content p{
-        font-size: x-large;
+        font-size: large;
         
         margin: 0; /* Optional: Adjust margins if needed */
     }
