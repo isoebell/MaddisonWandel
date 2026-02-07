@@ -169,10 +169,9 @@ html, body {
 
 /* Media Queries */
 @media (max-width: 800px) {
-    *{
-        margin-left: 0.2%;
+    .body {
+            padding-left: 0.2%;
     }
-
     .header {
         padding-bottom: 1%;
         font-size: large;
@@ -197,7 +196,7 @@ html, body {
         width: calc(100vw - 2%); /* Adjust to remove padding from the viewport width */
         display: flex; /* Enable flexbox for centering */
         flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center the content horizontally */
+        align-items: flex-start; /* Align items to the start */
         justify-content: center, space-between; /* Center content vertically */
         overflow: hidden; /* Hide the content overflow */
         margin-bottom: 2%;
@@ -207,10 +206,9 @@ html, body {
 
     .content p{
         font-size: large;
-        
+        width: 100%;
         margin: 0; /* Optional: Adjust margins if needed */
     }
-    
 
     /* Center the image and adjust width */
     .content img {
@@ -240,26 +238,24 @@ html, body {
     
 
     /* Hero image container */
+    @media (max-width: 800px) {
     .hero-img {
-        flex: 2; /* Allow the hero image to take up more space */
         display: flex;
-        justify-content: center; /* Center the image horizontally */
-        align-items: center; /* Center the image vertically */
-        width: 100vw; /* Make the container 70% of the viewport width */
-        height: auto; /* The height will be adjusted automatically to maintain the aspect ratio */
-        padding-bottom: 1%; /* Add some padding to the bottom */
-        padding-top: 1%; /* Add some padding to the top */
-        padding-left: 0; /* Add some padding to the left */
-        margin-left: 0;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 1% 0;
+        box-sizing: border-box;
     }
 
-    /* Make the image responsive */
     .hero-img img {
-        width: 95%; /* Make the image fill the width of the container */
+        width: 100%;
+        padding: 0 1%;
         height: auto;
-        padding-left: 0; /* Add some padding to the left */
-        margin-left: 0;
+        display: block;
     }
+}
 
     .navigation a, .navigation .title {
         width: 90vw; /* Make the width as wide as the content */
