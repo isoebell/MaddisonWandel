@@ -245,13 +245,12 @@ html, body {
         align-items: center;
         width: 100%;
         max-width: 100%;
-        padding: 1% 0;
+        padding: 0 1%;
         box-sizing: border-box;
     }
 
     .hero-img img {
         width: 100%;
-        padding: 0 2%;
         height: auto;
         display: block;
     }
