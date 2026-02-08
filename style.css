@@ -27,9 +27,7 @@
     font-family: 'LibreBaskerville';
 }
 
-html {
-    overflow-y: scroll; /* Always show vertical scrollbar to prevent layout shift */
-}
+
 html, body {
     height: 100%;
 }
@@ -209,13 +207,13 @@ body {
     }
 
     .content {
-        width: calc(100vw - 2%); /* Adjust to remove padding from the viewport width */
+        width: 100%;
         display: flex; /* Enable flexbox for centering */
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the start */
-        justify-content: center, space-between; /* Center content vertically */
+        padding-inline: 0;
         overflow: hidden; /* Hide the content overflow */
-        margin-bottom: 2%;
+        
         font-size: large;
         
     }
