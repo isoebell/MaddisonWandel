@@ -146,13 +146,12 @@ body {
     align-items: start; /* Center the image vertically */
     width: 70vw; /* Make the container 70% of the viewport width */
     height: auto; /* The height will be adjusted automatically to maintain the aspect ratio */
-    padding-bottom: 1%; /* Add some padding to the bottom */
-    padding-left: 1%; /* Add some padding to the left */
+    padding: 0 1.5rem;
 }
 
 /* Make the image responsive */
 .hero-img img {
-    width: 80%; /* Make the image fill the width of the container */
+    width: 90%; /* Make the image fill the width of the container */
     height: auto;
 }
 
@@ -212,8 +211,8 @@ body {
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the start */
         padding-inline: 0;
+        padding: 0.5rem 0; /* Add some padding to the top and bottom */
         overflow: hidden; /* Hide the content overflow */
-        
         font-size: large;
         
     }
@@ -252,19 +251,18 @@ body {
     /* Hero image container */
     @media (max-width: 800px) {
     .hero-img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
-        max-width: 100%;
-        padding: 0 1%;
-        box-sizing: border-box;
+        display: flex; /* Enable flexbox for centering */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        padding-inline: 0;
+        overflow: hidden; /* Hide the content overflow */
+        padding: 0.5rem 0; /* Add some padding to the top and bottom */
     }
 
     .hero-img img {
         width: 100%;
         height: auto;
-        display: block;
     }
 }
 
