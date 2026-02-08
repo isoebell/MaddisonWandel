@@ -13,24 +13,37 @@
 }
 
 /* Basic styling */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
     margin: 0;
     padding: 0;
     /*background-color: #CDD3DF;*/
     font-family: 'LibreBaskerville';
-    font-size: 1em;
 }
 
+html {
+    overflow-y: scroll; /* Always show vertical scrollbar to prevent layout shift */
+}
 html, body {
     height: 100%;
+}
+
+body {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .header {
-    padding-left: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding: 0.5rem;
+    font-size: 1em;
 }
 
 .header a {
@@ -47,7 +60,11 @@ html, body {
     flex: 1; /* Allow the middle section to take up the remaining space */
     justify-content: flex-start; /* Align items at the top, remove space-between */
     align-items: flex-start; /* Align items at the top */
-    padding-top: 0; /* Remove the top padding to reduce space */
+    padding: 0.5rem;
+}
+
+.middle p{
+    font-size: 1em;
 }
 
 .footer {
@@ -55,7 +72,7 @@ html, body {
     padding-top: 0.5%;
     padding-left: 1%;
     padding-bottom: 0.5%;
-    font-size: smaller;
+    font-size: 0.9rem;
 }
 
 .footer a {
@@ -70,8 +87,6 @@ html, body {
 .navigation {
     display: flex; /* Enable flexbox */
     flex-direction: column; /* Stack items vertically */
-    padding-left: 1%; /* Add some padding to the left */
-    padding-right: 1%; /* Add some padding to the right */
     flex: 0 0 25%; /* Make the navigation take up 25% of the width */
 }
 
@@ -91,10 +106,10 @@ html, body {
 }
 
 .content {
-    padding-left: 1%;
-    padding-right: 2%;
+    padding-inline: 0;
     flex: 1;
     min-width: 0; /* IMPORTANT: prevents overflow eating nav */
+    width: 100%;
     align-items:start;
     display: flex; /* Enable flexbox for centering */
     flex-direction: column; /* Stack items vertically */
@@ -118,7 +133,6 @@ html, body {
 .content .item p {
     font-family: 'LibreBaskerville';
     text-align: left; /* Center align the paragraph text */
-    margin-bottom: 2%;
     font-size: 0.9rem;
     width: 100%;
     word-wrap: break-word;
@@ -169,11 +183,10 @@ html, body {
 
 /* Media Queries */
 @media (max-width: 800px) {
-    .body {
-            padding-left: 0.2%;
-    }
+
+
     .header {
-        padding-bottom: 1%;
+        padding-bottom: 0.5rem;
         font-size: large;
 
     }
@@ -181,18 +194,21 @@ html, body {
         display: block; /* Stack items vertically */
         align-items: start; /* Align items to the start */
         font-size: large;
+        padding-inline: 0.5rem;
     }
 
     .footer{
         border-top: 0.2em dotted #000;
         padding-top: 1%;   
         padding-bottom: 2%; 
-        font-size: large;
+        font-size: smaller;
+    }
 
+    .footer a{
+        text-decoration: underline;
     }
 
     .content {
-        padding-top: 3%;
         width: calc(100vw - 2%); /* Adjust to remove padding from the viewport width */
         display: flex; /* Enable flexbox for centering */
         flex-direction: column; /* Stack items vertically */
@@ -212,15 +228,13 @@ html, body {
 
     /* Center the image and adjust width */
     .content img {
-        width: 95vw; /* Make the image 95% of the viewport width */
+        width: 100%; /* Make the image 95% of the viewport width */
         height: auto; /* Maintain the aspect ratio */
 
     }
 
     .content .item p {
-        margin-bottom: 1%;
-        margin-top: 0.5%;
-        width: 97vw;
+        width: 100%;
     }
    
     .content a{
@@ -228,7 +242,7 @@ html, body {
     }
 
     .content img[alt="Grad2024-05"] {
-        width: 95vw; /* Example: Adjust the width */
+        width: 100%; /* Example: Adjust the width */
     }
 
     .infoText.show {
