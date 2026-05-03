@@ -243,7 +243,7 @@ body {
     }
 
     .infoText.show {
-        gap: 0.3rem; /* Add some space between the items */
+        gap: 0.1rem; /* Add some space between the items */
     }
 
     
